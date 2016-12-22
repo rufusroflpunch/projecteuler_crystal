@@ -32,4 +32,16 @@ abstract struct Int
     half = self / 2_i64
     (2_i64..half).select { |f| self.divisible_by?(f) }
   end
+
+  # Reverse an integer (does not use String).
+  def reverse
+    num = self
+    rev = 0
+    while num > 0
+      factor = num % 10
+      num = (num - factor) / 10
+      rev = rev * 10 + factor
+    end
+    rev
+  end
 end
