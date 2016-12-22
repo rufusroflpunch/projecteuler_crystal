@@ -14,7 +14,7 @@ class Problem
   end
 
   def self.last
-    @@problems.keys.last
+    @@problems.keys.map(&.to_i).sort.last.to_s
   end
 
   def solve

@@ -1,6 +1,5 @@
-require "./projecteuler_crystal/problem"
-require "./projecteuler_crystal/common" # Make sure we load common first
-require "./projecteuler_crystal/*"
+require "./projecteuler_crystal/lib/*" # Make sure we load common first
+require "./projecteuler_crystal/problems/*"
 
 module ProjecteulerCrystal
   begin
