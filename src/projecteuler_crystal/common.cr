@@ -1,3 +1,4 @@
+# A generator of Fibonacci numbers.
 class Fibonacci
   include Enumerable(Int32)
 
@@ -14,5 +15,21 @@ class Fibonacci
       @last_num = @num
       @num = temp_last + @num
     end
+  end
+end
+
+abstract struct Int
+  # Is the number prime?
+  def prime?
+    return false if even?
+    half = self / 2
+    (3..half).select(&.odd?).each { |i| return false if self.divisible_by?(i) }
+    true
+  end
+
+  # Return an array of factors for the number.
+  def factors
+    half = self / 2_i64
+    (2_i64..half).select { |f| self.divisible_by?(f) }
   end
 end
