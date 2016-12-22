@@ -5,6 +5,7 @@ require "./projecteuler_crystal/*"
 module ProjecteulerCrystal
   begin
     problem = ARGV.shift? || Problem.last
+    puts "Solving problem " + problem
     puts Problem.solve(problem)
   rescue e : KeyError
     abort "Problem not found."
