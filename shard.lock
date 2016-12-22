@@ -1,0 +1,6 @@
+version: 1.0
+shards:
+  icr:
+    github: greyblake/crystal-icr
+    commit: 8a2b83a25af8db3313c89c711c5764eb22a54d0c
+
