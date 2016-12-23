@@ -27,4 +27,14 @@ abstract struct Int
     end
     rev
   end
+
+  def collatz
+    num = self
+    nums = [num]
+    until num == 1
+      num = num.even? ? num/2 : num*3+1
+      nums << num
+    end
+    nums
+  end
 end
