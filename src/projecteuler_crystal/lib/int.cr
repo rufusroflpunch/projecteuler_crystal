@@ -28,6 +28,7 @@ abstract struct Int
     rev
   end
 
+  # Generate a collatz sequence for an integer.
   def collatz
     num = self
     nums = [num]
@@ -36,5 +37,9 @@ abstract struct Int
       nums << num
     end
     nums
+  end
+
+  def power_digit_sum(other)
+    (self**other).to_s.split("").map(&.to_i).sum
   end
 end
