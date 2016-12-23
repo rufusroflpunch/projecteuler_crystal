@@ -12,8 +12,8 @@ abstract struct Int
 
   # Return an array of factors for the number.
   def factors
-    half = self / 2_i64
-    (2_i64..half).select { |f| self.divisible_by?(f) }
+    half = self / 2
+    (2..half).select { |f| divisible_by?(f) }
   end
 
   # Reverse an integer (does not use String).
